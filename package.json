@@ -1,0 +1,14 @@
+{
+  "name": "PDCNODE",
+  "version": "1",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+   
+  },
+ 
+  },
+  "license": "MIT"
+}
