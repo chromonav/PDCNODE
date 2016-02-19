@@ -17,7 +17,7 @@ app.post('/api/users', function(req, res) {
 	var token = req.body.token;
 	var geo = req.body.geo;
 
-
+    console.log(user_id + token + geo);
 });
 
 app.use(methodOverride());
