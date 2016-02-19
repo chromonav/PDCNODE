@@ -31,7 +31,7 @@ app.post('/', function(req, res) {
       res.redirect("dashboard")
 });
 app.get('/dashboard', function(req, res) {
-    console.dir(req.body);
+
 
       res.sendFile("public/dashboard.html",{ root: __dirname })
 });
