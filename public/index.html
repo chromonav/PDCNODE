@@ -27,6 +27,7 @@
                     <li><a href="#one">Agenda</a></li>
                     <li><a href="#two">Downloads</a></li>
                     <li><a href="#three">Feedback Please</a></li>
+                                        <li><a href="/dashboard">Dashboard</a></li>
                 </ul>
             </nav>
         </div>
@@ -110,23 +111,24 @@
                 <p>Feedbacks are indeed crucial for us. Please let us how we could have been better.</p>
                 <div class="split style1">
                     <section>
-                        <form method="post" id="feedbacksubmit" action="#">
+                        <form action="/" method="post" id="feedbacksubmit">
                             <div class="field half first">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" id="name" />
+                                <input  type="text" id="name" name="name" placeholder="Enter your full name" />
                             </div>
                             <div class="field half">
                                 <label for="email">Email</label>
-                                <input type="text" name="email" id="email" />
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" />
                             </div>
                             <div class="field">
                                 <label for="message">Feedback</label>
-                                <textarea name="message" id="message" rows="5"></textarea>
+                                <textarea id="message" name="message" placeholder="What's on your mind?"></textarea>
                             </div>
                             <ul class="actions">
-                                <li><a href="" class="button submit" id="submit">Submit</a></li>
+                                <li><input type="submit" class="btn btn-submit" value="Send message" /></li>
                             </ul>
                         </form>
+                        
                     </section>
                     <section>
                         <ul class="contact">
@@ -138,7 +140,7 @@ Alandi Road, Dighi Hills, Pune, Maharashtra 411015, Pune</span>
                             <li>
                                 <h3>Email</h3>
                                 <a href="#">cykulkarni@hotmail.com</a>
-                            </li>   
+                            </li>
                             <li>
                                 <h3>Phone</h3>
                                 <span>8805189711</span>

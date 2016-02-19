@@ -8,17 +8,6 @@ var express = require("express"),
     port = parseInt(process.env.PORT, 10) || 4567,
     path = require('path');
 
-app.get("/", function (req, res) {
-    res.sendFile("public/index.html", { root: __dirname });
-});
-
-app.post('/api/users', function(req, res) {
-	var user_id = req.body.id;
-	var token = req.body.token;
-	var geo = req.body.geo;
-
-    console.log(user_id + token + geo);
-});
 
 app.use(methodOverride());
 app.use(bodyParser.json());         // support json encoded bodies
@@ -30,6 +19,22 @@ app.use(errorHandler({
     dumpExceptions: true,
     showStack: true
 }));
+
+app.get("/", function (req, res) {
+    res.sendFile("public/index.html", { root: __dirname });
+  
+});
+
+app.post('/', function(req, res) {
+    console.dir(req.body);
+
+      res.redirect("dashboard")
+});
+app.get('/dashboard', function(req, res) {
+    console.dir(req.body);
+
+      res.sendFile("public/dashboard.html",{ root: __dirname })
+});
 console.log("server running on:" + port);
 
 app.listen(port, hostname);

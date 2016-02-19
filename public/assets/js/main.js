@@ -208,21 +208,6 @@
     });
 
 
-    $("#feedbacksubmit").submit(function (event) {
-        name = $("#name").val();
-        email = $("#email").val();
-        message = $("#message").val();
 
-        $.ajax({
-            type: "POST",
-            url: "/",
-            data: name + email + message,
-            success: success,
-            dataType: JSON
-        });
-
-        event.preventDefault();
-
-    });
 
 })(jQuery);
